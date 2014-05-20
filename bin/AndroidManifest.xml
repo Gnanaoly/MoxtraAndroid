@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.moxtrasample"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+    
+    
+    <!-- Test Permission -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    
+
+    <application  
+        android:allowBackup="true"  
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.moxtrasample.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        
+        
+        
+        <activity
+            android:name=".CopyOfMainActivity"
+            >
+        </activity>
+        
+            <!-- Test for Moxtra -->
+
+        <activity
+            android:name="com.moxtra.binder.activity.DialogFragmentActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.moxtra.binder.livemeet.LiveMeetActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.moxtra.binder.login.MXLoginActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/MXActivityDialog" />
+        <activity
+            android:name="com.moxtra.binder.activity.MXStackActivity"
+            android:theme="@style/MXActivityDialog" >
+        </activity>
+        <activity android:name="com.moxtra.binder.conversation.MXConversationActivity" >
+        </activity>
+        <activity android:name="com.moxtra.binder.profile.ProfileActivity" />
+        <activity
+            android:name="com.moxtra.binder.tabs.MainActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.moxtra.binder.pageview.PageViewActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.moxtra.binder.thumbnail.PuglicLinkThumbnailActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity android:name="com.moxtra.binder.multiimagepicker.MultiImagePickerActivity" />
+
+        <service android:name="com.moxtra.binder.service.AudioPlayerService" ></service>
+     
+            <service android:name="com.moxtra.binder.RingService" ></service>
+            
+    </application>
+    
+   
+
+</manifest>

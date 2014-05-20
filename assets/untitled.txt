@@ -1,0 +1,50 @@
+
+	
+ 	
+  public oncreate(){	
+
+	
+	try	
+	  {	 //Check email is empty	or not	
+	  
+	MXAccountManager.MXAccount	 inAcct	 =	new	 MXAccountManager.MXAccount(email);	
+	  
+	  if(mAcctMgr==	null)	
+	   mAcctMgr=MXAccountManager.getInstance(getApplicationContext(),appClientId,appClientSecret,authCallbackUrl,inAcct);	
+	  	
+	   mAcctMgr.setInputAccount(inAcct);	
+	  	
+	  	
+	  	
+	   }	
+	  catch(MXException.InvalidParameter invalidParameter)	
+	  {	
+		 invalidParameter.printStackTrace();	
+	  	
+	  	
+	  }	
+	  catch	(MXException.AccountDifferent accountDifferent)	
+	  {	
+		 
+	  accountDifferent.printStackTrace();	
+	  	
+	  	
+	  }	
+	   
+	
+	
+  }	
+  public MXAccountManager	getAcctMgr(){	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ return	 mAcctMgr;	
+  }	
+ 	
+ 
+  
